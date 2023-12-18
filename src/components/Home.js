@@ -1,29 +1,19 @@
-import React from "react";
+import React, { Fragment } from "react";
+import "../styles.css";
 
-const Home = () => {
+const Home = (props) => {
+  console.log(props);
   return (
     <>
-      <h2>Últimos lançamentos</h2>
-      <div className="card">
-        <div className="thumb">
-          <img src="/imagens/capas/9788575228142.jpg" alt="" />
-        </div>
-        <div className="detalhes">
-          <h3>Padrões para Kubernates</h3>
-          <p>O modo como os ...</p>
-          <a href="#">Leia mais &gt;</a>
-        </div>
-      </div>
-      <div className="card">
-        <div className="thumb">
-          <img src="/imagens/capas/9788575228074.jpg" alt="" />
-        </div>
-        <div className="detalhes">
-          <h3>Introdução ao Pentest - 2ª Edição</h3>
-          <p>Introdução ao Pentest ...</p>
-          <a href="#">Leia mais &gt;</a>
-        </div>
-      </div>
+      <h3>{props.tituloPagina}</h3>
+      <p>
+        ISBN: {props.isbn}
+        <br />
+        Título: {props.titlo}
+        <br />
+        Autor: {props.autor}
+        <br />
+      </p>
     </>
   );
 };
