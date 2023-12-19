@@ -16,11 +16,11 @@ class App extends Component {
       <Router>
         <Topo />
         <Routes>
-          <Route exact path="/" element={Home} />
-          <Route exact path="/frontend" element={() => <Frontend />} />
-          <Route exact path="/programacao" element={() => <Programacao />} />
-          <Route exact path="/design" element={() => <Design />} />
-          <Route exact path="/catalogo" element={(props) => <Catalogo />} />
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/frontend" element={<Frontend />} />
+          <Route exact path="/programacao" element={<Programacao />} />
+          <Route exact path="/design" element={<Design />} />
+          <Route exact path="/catalogo" element={<Catalogo />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Rodape />
