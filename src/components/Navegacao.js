@@ -1,22 +1,37 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+
+let linkCorrente = {
+  color: "#027399",
+};
 
 const Navegacao = () => {
   return (
     <ul>
       <li>
-        <a href="#">Home</a>
+        <NavLink exact activeStyle={linkCorrente} to="/">
+          Home
+        </NavLink>
       </li>
       <li>
-        <a href="#">Frontend</a>
+        <NavLink exact activeStyle={linkCorrente} to="/frontend">
+          Frontend
+        </NavLink>
       </li>
       <li>
-        <a href="#">Programação</a>
+        <NavLink exact activeStyle={linkCorrente} to="/programacao">
+          Programação
+        </NavLink>
       </li>
       <li>
-        <a href="#">Designer</a>
+        <NavLink exact activeStyle={linkCorrente} to="/designer">
+          Designer
+        </NavLink>
       </li>
       <li>
-        <a href="#">Catálogo</a>
+        <NavLink exact activeStyle={linkCorrente} to="/catalogo">
+          Catálogo
+        </NavLink>
       </li>
     </ul>
   );
