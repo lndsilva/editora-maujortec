@@ -1,21 +1,32 @@
 import React, { Fragment } from "react";
 import "../style.css";
 
-const Home = (props) => {
-  console.log(props);
+const Home = () => {
   return (
     <>
-      <h3>{props.tituloPagina}</h3>
-      {props.dados.map((item, i) => (
-        <p>
-          ISBN: {props.dados[i].isbn}
-          <br />
-          Título: {props.dados[i].titulo}
-          <br />
-          Autor: {props.dados[i].autor}
-        </p>
-      ))}
+      <h2>Últimos lançamentos</h2>
+      <div className="card">
+        <div className="thumb">
+          <img src="imagens/capas/9788575228142.jpg" alt="" />
+        </div>
+        <div className="detalhes">
+          <h3>Padrões para Kuberbetes</h3>
+          <p>O modo como os ...</p>
+          <a href="#">Leia mais &gt;</a>{" "}
+        </div>
+      </div>
+      <div className="card">
+        <div className="thumb">
+          <img src="imagens/capas/9788575228074.jpg" alt="" />
+        </div>
+        <div className="detalhes">
+          <h3>Introdução ao Pentest - 2ª Edução</h3>
+          <p>Introdução ao Pentest...</p>
+          <a href="#">Leia mais &gt;</a>{" "}
+        </div>
+      </div>
     </>
   );
 };
+
 export default Home;
