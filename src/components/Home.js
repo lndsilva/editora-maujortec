@@ -1,19 +1,20 @@
 import React, { Fragment } from "react";
-import "../styles.css";
+import "../style.css";
 
 const Home = (props) => {
   console.log(props);
   return (
     <>
       <h3>{props.tituloPagina}</h3>
-      <p>
-        ISBN: {props.isbn}
-        <br />
-        Título: {props.titlo}
-        <br />
-        Autor: {props.autor}
-        <br />
-      </p>
+      {props.dados.map((item, i) => (
+        <p>
+          ISBN: {props.dados[i].isbn}
+          <br />
+          Título: {props.dados[i].titulo}
+          <br />
+          Autor: {props.dados[i].autor}
+        </p>
+      ))}
     </>
   );
 };

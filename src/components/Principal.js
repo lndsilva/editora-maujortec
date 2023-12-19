@@ -1,22 +1,13 @@
 import React from "react";
 import Home from "./Home";
-const Principal = () => {
-  
-  const isbn = "ISBN: 978-85-7522-XXX-X";
-  const titulo = "React";
-  const autor = "Maujor";
-  const tituloPagina = "Últimos lançamentos";
 
-  return (
-    <main className="principal">
-      <Home 
-        isbn={isbn}
-        titulo={titulo}
-        autor={autor}
-        tituloPagina={tituloPagina}
-      />
-    </main>
-  );
-};
+const tituloPagina = "Últimos lançamentos";
+const dados = [
+  { isbn: "978-85-722-xxx-x", titulo: "React", autor: "Maujor" },
+  { isbn: "978-85-722-776-3", titulo: "Designer UX", autor: "Will" },
+  { isbn: "978-85-722-550-9", titulo: "Laravel para ninjas", autor: "Jack" },
+];
+
+const Principal = () => <Home dados={dados} tituloPagina={tituloPagina} />;
 
 export default Principal;
